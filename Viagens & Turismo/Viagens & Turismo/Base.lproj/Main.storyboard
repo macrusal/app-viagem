@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Viagens___Turismo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOd-W4-2p1" userLabel="View Header">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="145"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hibejix viagens" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzd-Nm-xpB">
-                                        <rect key="frame" x="124.5" y="17" width="126.5" height="25"/>
+                                        <rect key="frame" x="321" y="17" width="126.5" height="25"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSl-UO-m9H" userLabel="View Button Pacotes">
-                                <rect key="frame" x="231" y="119" width="100" height="50"/>
+                                <rect key="frame" x="624" y="119" width="100" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6H6-P9-X7i">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
@@ -90,14 +90,14 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LHU-Hj-m8d">
-                                <rect key="frame" x="0.0" y="177" width="375" height="490"/>
+                                <rect key="frame" x="0.0" y="177" width="768" height="847"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" rowHeight="175" id="gci-hU-a1M" customClass="TableViewCell" customModule="Viagens___Turismo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="175"/>
+                                        <rect key="frame" x="0.0" y="28" width="768" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gci-hU-a1M" id="2mc-bv-ECV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="174.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="174.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amP-mG-b7S">
@@ -119,11 +119,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s3I-iJ-zpg">
-                                                    <rect key="frame" x="15" y="23" width="345" height="125"/>
+                                                    <rect key="frame" x="15" y="23" width="733" height="125"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="s3I-iJ-zpg" secondAttribute="trailing" constant="15" id="142-cW-dzH"/>
                                                 <constraint firstAttribute="bottom" secondItem="af7-qo-91c" secondAttribute="bottom" constant="5.5" id="1mu-aF-pAn"/>
                                                 <constraint firstAttribute="bottom" secondItem="uLB-Gf-KHN" secondAttribute="bottom" constant="6.5" id="2WL-Le-HeL"/>
                                                 <constraint firstItem="amP-mG-b7S" firstAttribute="leading" secondItem="2mc-bv-ECV" secondAttribute="leading" constant="15" id="4Rs-8X-Tws"/>
@@ -132,6 +131,7 @@
                                                 <constraint firstItem="uLB-Gf-KHN" firstAttribute="top" secondItem="s3I-iJ-zpg" secondAttribute="bottom" constant="-1" id="Gpx-dq-I1e"/>
                                                 <constraint firstItem="s3I-iJ-zpg" firstAttribute="top" secondItem="amP-mG-b7S" secondAttribute="bottom" constant="1" id="M9T-UQ-vUG"/>
                                                 <constraint firstItem="amP-mG-b7S" firstAttribute="top" secondItem="2mc-bv-ECV" secondAttribute="top" id="O05-yA-dEA"/>
+                                                <constraint firstAttribute="trailing" secondItem="s3I-iJ-zpg" secondAttribute="trailing" constant="20" symbolic="YES" id="eKm-XW-GXU"/>
                                                 <constraint firstAttribute="trailing" secondItem="af7-qo-91c" secondAttribute="trailing" constant="15" id="qF5-Yu-2Jn"/>
                                             </constraints>
                                         </tableViewCellContentView>

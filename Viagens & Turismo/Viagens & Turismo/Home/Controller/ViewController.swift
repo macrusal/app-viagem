@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let viagemAtual = listaViagens[indexPath.row];
         cell.labelTitulo?.text = viagemAtual.titulo;
         cell.labelQuantidadeDias?.text = "\(viagemAtual.quantidadeDias) dias";
-        cell.labelPreco?.text = viagemAtual.preco;
+        cell.labelPreco?.text = "R$ \(viagemAtual.preco)";
         cell.imagemViagem?.image = UIImage(named: viagemAtual.caminhoImagem);
         cell.imagemViagem.layer.cornerRadius = 10;
         cell.imagemViagem.layer.masksToBounds = true;
@@ -45,7 +45,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 175;
+        
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 175 : 260;
     }
 }
 

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, UICollectionViewDelegate {
 
-    let listaComTodasViagens:Array<Viagem> = ViagemDAO().retornaTodasAsViagens();
-    var listaViagens:Array<Viagem> = [];
+    let listaComTodasViagens:Array<PacoteViagem> = PacoteViagemDAO().retornaTodasAsViagens();
+    var listaViagens:Array<PacoteViagem> = [];
     @IBOutlet weak var colecaoPacotesViagem: UICollectionView!;
     @IBOutlet weak var pesquisarViagens: UISearchBar!;
     
@@ -38,12 +38,12 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         
         let celulaPacote = collectionView.dequeueReusableCell(withReuseIdentifier: "celulaPacote", for: indexPath) as! PacoteViagemCollectionViewCell;
         
-        let viagemAtual = listaViagens[indexPath.item];
+        let pacoteAtual = listaViagens[indexPath.item];
         
-        celulaPacote.labelTitulo?.text = viagemAtual.titulo;
-        celulaPacote.labelQuantidadeDias?.text = "\(viagemAtual.quantidadeDias) dias";
-        celulaPacote.labelPreco?.text = "R$ \(viagemAtual.preco)";
-        celulaPacote.imagemViagem?.image = UIImage(named: viagemAtual.caminhoImagem);
+        celulaPacote.labelTitulo?.text = pacoteAtual.viagem.titulo;
+        celulaPacote.labelQuantidadeDias?.text = "\(pacoteAtual.viagem.quantidadeDias) dias";
+        celulaPacote.labelPreco?.text = "R$ \(pacoteAtual.viagem.preco)";
+        celulaPacote.imagemViagem?.image = UIImage(named: pacoteAtual.viagem.caminhoImagem);
         celulaPacote.layer.borderWidth = 0.5;
         celulaPacote.layer.borderColor = UIColor(displayP3Red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1).cgColor;
         celulaPacote.layer.cornerRadius = 8;
@@ -55,11 +55,19 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         return CGSize(width: larguraCelula / 2, height: 160);
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let pacote = listaViagens[indexPath.item];
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil);
+        let controller = storyBoard.instantiateViewController(withIdentifier: "detalhesViagem") as! DetalhesViagemViewController;
+        controller.pacoteSelecionado = pacote;
+        self.navigationController?.pushViewController(controller, animated: true);
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         listaViagens = listaComTodasViagens;
         if searchText != "" {
             let filtroListaViagem = NSPredicate(format: "titulo contains%@", searchText);
-            let listaFiltrada:Array<Viagem> = (listaViagens as NSArray).filtered(using: filtroListaViagem) as! Array;
+            let listaFiltrada:Array<PacoteViagem> = (listaViagens as NSArray).filtered(using: filtroListaViagem) as! Array;
             listaViagens = listaFiltrada;
         }
         self.labelContadorPacotes.text = self.atualizaContadorLabel();
@@ -69,4 +77,5 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     func atualizaContadorLabel() -> String {
         return listaViagens.count == 1 ? "1 pacote encontrado" : "\(listaViagens.count) pacotes encontrados";
     }
+    
 }

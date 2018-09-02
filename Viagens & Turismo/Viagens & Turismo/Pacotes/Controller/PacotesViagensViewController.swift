@@ -51,8 +51,7 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let larguraCelula = colecaoPacotesViagem.bounds.width-15;
-        return CGSize(width: larguraCelula / 2, height: 160);
+        return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: colecaoPacotesViagem.bounds.width/2-20, height: 160) : CGSize(width: colecaoPacotesViagem.bounds.width/3-20, height: 250);
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

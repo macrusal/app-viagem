@@ -16,7 +16,7 @@ class PacoteViagemDAO: NSObject {
         
         let pacoteBuzios = PacoteViagem(nomeHotel: "Resort Buzios Spa", descricao: "Hotel + café da manhã", dataViagem: "9~16 de setembro", viagem: Viagem(titulo: "Buzios", quantidadeDias: 7, preco: "1.990,99", caminhoImagem: "img7.jpg"))
         
-        let pacoteNatal = PacoteViagem(nomeHotel: "Resort Natal Show", descricao: "Hotel + café da manhã", dataViagem: "13~18 de setembroo", viagem: Viagem(titulo: "Natal", quantidadeDias: 5, preco: "1.700,00", caminhoImagem: "img8.jpg"))
+        let pacoteNatal = PacoteViagem(nomeHotel: "Resort Natal Show", descricao: "Hotel + café da manhã", dataViagem: "13~18 de setembro", viagem: Viagem(titulo: "Natal", quantidadeDias: 5, preco: "1.700,00", caminhoImagem: "img8.jpg"))
         
         let pacoteRioDeJaneiro = PacoteViagem(nomeHotel: "Resort RJ Spa", descricao: "Hotel + café da manhã", dataViagem: "9~13 de outubro", viagem: Viagem(titulo: "Rio de Janeiro", quantidadeDias: 4, preco: "2.300,00", caminhoImagem: "img9.jpg"))
         

@@ -12,7 +12,7 @@ class PacoteViagem: NSObject {
     let nomeHotel:String;
     let descricao:String;
     let dataViagem:String;
-    let viagem: Viagem;
+    @objc let viagem: Viagem;
     
     init(nomeHotel: String, descricao: String, dataViagem: String, viagem: Viagem) {
         self.nomeHotel = nomeHotel;

@@ -26,7 +26,7 @@ class ConfirmacaoPagamentoViewController: UIViewController {
             self.imagemPacoteViagem.image = UIImage(named: pacote.viagem.caminhoImagem);
             self.labelHotelPacoteViagem.text = pacote.nomeHotel;
             self.labelTituloPacoteViagem.text = pacote.viagem.titulo.uppercased();
-            self.labelDataPacoteViagem.text = pacote.dataViagem;
+            self.labelDataPacoteViagem.text = "Válido para o período de: \(pacote.dataViagem)";
             self.labelDescricao.text = pacote.descricao;
             self.imagemPacoteViagem.layer.cornerRadius = 10;
             self.imagemPacoteViagem.layer.masksToBounds = true;

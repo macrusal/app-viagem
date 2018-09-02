@@ -28,7 +28,7 @@ class DetalhesViagemViewController: UIViewController {
             self.imagemPacoteViagem.image = UIImage(named: pacote.viagem.caminhoImagem);
             self.labelTituloPacoteViagem.text = pacote.viagem.titulo;
             self.labelDescricaoPacoteViagem.text = pacote.descricao;
-            self.labelDataViagem.text = pacote.dataViagem;
+            self.labelDataViagem.text = "Válido para o período de: \(pacote.dataViagem)";
             self.labelPrecoPacoteViagem.text = pacote.viagem.preco;
             self.botaoFinalizarCompra.layer.cornerRadius = 8;
         }

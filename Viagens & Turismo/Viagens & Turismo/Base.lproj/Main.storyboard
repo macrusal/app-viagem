@@ -118,6 +118,9 @@
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="abrirFrameHotel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ebD-lR-MH4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -231,6 +234,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="57" y="393"/>
+        </scene>
+        <!--Detalhe Hoteis View Controller-->
+        <scene sceneID="SGd-Bi-UXR">
+            <objects>
+                <viewController storyboardIdentifier="detalheHoteis" id="s41-7a-bWa" customClass="DetalheHoteisViewController" customModule="Viagens___Turismo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ojk-nA-eF7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBA-E8-xIa">
+                                <rect key="frame" x="0.0" y="38" width="375" height="629"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="jKQ-Xb-gSU">
+                                <rect key="frame" x="169" y="334" width="37" height="37"/>
+                                <color key="color" red="0.21960784310000001" green="0.71372549019999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jKQ-Xb-gSU" firstAttribute="centerY" secondItem="vBA-E8-xIa" secondAttribute="centerY" id="5sa-hF-r72"/>
+                            <constraint firstItem="vBA-E8-xIa" firstAttribute="trailing" secondItem="Qe6-wC-DvY" secondAttribute="trailing" id="9q8-kP-FvX"/>
+                            <constraint firstItem="vBA-E8-xIa" firstAttribute="leading" secondItem="Qe6-wC-DvY" secondAttribute="leading" id="QcI-Z1-Iwr"/>
+                            <constraint firstItem="vBA-E8-xIa" firstAttribute="top" secondItem="Qe6-wC-DvY" secondAttribute="top" constant="18" id="nTR-GQ-ZmH"/>
+                            <constraint firstItem="jKQ-Xb-gSU" firstAttribute="centerX" secondItem="vBA-E8-xIa" secondAttribute="centerX" id="qyT-5C-TAt"/>
+                            <constraint firstItem="vBA-E8-xIa" firstAttribute="bottom" secondItem="Qe6-wC-DvY" secondAttribute="bottom" id="y16-aE-txH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qe6-wC-DvY"/>
+                    </view>
+                    <connections>
+                        <outlet property="large" destination="jKQ-Xb-gSU" id="UFa-0D-1QQ"/>
+                        <outlet property="webview" destination="vBA-E8-xIa" id="8Tw-Mr-8Cn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="thA-M9-3Rr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="393"/>
         </scene>
         <!--Pacotes-->
         <scene sceneID="9aG-eQ-R0M">

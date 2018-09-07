@@ -43,5 +43,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 175 : 260;
     }
+    
+    @IBAction func abrirFrameHotel(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil);
+        let controller = storyBoard.instantiateViewController(withIdentifier:"detalheHoteis") as! DetalheHoteisViewController;
+        self.navigationController?.pushViewController(controller, animated: true);
+    }
+    
 }
 

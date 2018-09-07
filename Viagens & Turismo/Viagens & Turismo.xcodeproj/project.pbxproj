@@ -13,6 +13,7 @@
 		9C2A26C5213B26A200927AF1 /* PacoteViagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2A26C4213B26A200927AF1 /* PacoteViagem.swift */; };
 		9C2A26C8213B295500927AF1 /* PacoteViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2A26C7213B295500927AF1 /* PacoteViagemDAO.swift */; };
 		9C2A26CD213B4D0600927AF1 /* ConfirmacaoPagamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2A26CC213B4D0600927AF1 /* ConfirmacaoPagamentoViewController.swift */; };
+		9C460D892142581F0025F6CA /* DetalheHoteisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C460D882142581E0025F6CA /* DetalheHoteisViewController.swift */; };
 		9C5F5807213764AA00F7C278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F5806213764AA00F7C278 /* AppDelegate.swift */; };
 		9C5F5809213764AA00F7C278 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F5808213764AA00F7C278 /* ViewController.swift */; };
 		9C5F580C213764AA00F7C278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5F580A213764AA00F7C278 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		9C2A26C4213B26A200927AF1 /* PacoteViagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteViagem.swift; sourceTree = "<group>"; };
 		9C2A26C7213B295500927AF1 /* PacoteViagemDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacoteViagemDAO.swift; sourceTree = "<group>"; };
 		9C2A26CC213B4D0600927AF1 /* ConfirmacaoPagamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmacaoPagamentoViewController.swift; sourceTree = "<group>"; };
+		9C460D882142581E0025F6CA /* DetalheHoteisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheHoteisViewController.swift; sourceTree = "<group>"; };
 		9C5F5803213764AA00F7C278 /* Viagens & Turismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Viagens & Turismo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5F5806213764AA00F7C278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C5F5808213764AA00F7C278 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				9C5F5808213764AA00F7C278 /* ViewController.swift */,
+				9C460D882142581E0025F6CA /* DetalheHoteisViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				9C2A26CD213B4D0600927AF1 /* ConfirmacaoPagamentoViewController.swift in Sources */,
 				9C2A26BE2139DB0900927AF1 /* PacoteViagemCollectionViewCell.swift in Sources */,
 				9C5F581C2137781200F7C278 /* ViagemDAO.swift in Sources */,
+				9C460D892142581F0025F6CA /* DetalheHoteisViewController.swift in Sources */,
 				9C2A26C5213B26A200927AF1 /* PacoteViagem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
